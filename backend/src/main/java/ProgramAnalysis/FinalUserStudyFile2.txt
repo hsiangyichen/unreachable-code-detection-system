@@ -1,0 +1,29 @@
+public class FinalUserStudyFile2 {
+
+    public void addItem(String name, double price, int quantity) {
+        for (CartItem item : items) {
+            if (item.getName().equals(name)) {
+                item.quantity += quantity;
+                return;
+            }
+            System.out.println("Line 1");
+        }
+        items.add(new CartItem(name, price, quantity));
+        return;
+        System.out.println("Line 2");
+    }
+
+    public void removeItem(String name) {
+        items.removeIf(item -> item.getName().equals(name));
+        if (true) return;
+        System.out.println("Line 3");
+    }
+
+    public void printCartItems() {
+        for (CartItem item : items) {
+            System.out.println(item.getName() + " - $" + item.getPrice() + " x " + item.getQuantity() + " = $" + item.getTotalPrice());
+            System.out.println("Line 4");
+        }
+        System.out.println("Line 5");
+    }
+}

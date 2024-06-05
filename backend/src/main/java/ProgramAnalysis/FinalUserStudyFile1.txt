@@ -1,0 +1,40 @@
+package ProgramAnalysis;
+
+public class FinalUserStudyFile1 {
+
+    public String immediateReturn() {
+        int x = 5;
+        if (x > 10) {
+            System.out.println("Line 1");
+            return;
+        } else {
+            System.out.println("Line 2");
+            return;
+        }
+        System.out.println("Line 3");
+    }
+
+    public String alwaysTrueCondition() {
+        if (true) {
+            return;
+            System.out.println("Line 4");
+        }
+        System.out.println("Line 5");
+    }
+
+    public static void infiniteLoop() {
+        int x = 2;
+        int y = 10;
+        while (true) {
+            x = x + y;
+            System.out.println("Line 6");
+        }
+        System.out.println("Line 7");
+    }
+
+    public static void throwException() {
+        System.out.println("Line 8");
+        throw new RuntimeException("Exception thrown");
+        System.out.println("Line 9");
+    }
+}
